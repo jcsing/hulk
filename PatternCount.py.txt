@@ -1,0 +1,18 @@
+with open ("c:\\text.txt", "r") as myfile:
+    f=myfile.read()
+print "f is " + f
+g = "CCCTTGGCC"
+def patternCount(text, pattern ):
+   count=0
+   z=len(text) - len(pattern) + 1
+   print "z is " + str(z)
+   for i in range (z):
+      #print "i is now " + str(i)
+      #print "text in the window is " + text[i:i+len(pattern)]
+      if text[i:i+len(pattern)] == pattern:
+         count+=1
+      #print "Test print count is " + str(count)
+   return count
+
+count=patternCount(f, g)
+print "Number of times the pattern was found is " + str(count)
